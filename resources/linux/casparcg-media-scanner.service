@@ -1,0 +1,12 @@
+[Unit]
+Description=CasparCG Media Scanner
+After=basic.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/share/casparcg
+ExecStart=/usr/share/casparcg/bin/scanner
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
